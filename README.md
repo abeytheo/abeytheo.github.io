@@ -1,3 +1,7 @@
+---
+permalink: /index.html
+---
+
 # abeytheo
 
 My personal blog and portfolio
