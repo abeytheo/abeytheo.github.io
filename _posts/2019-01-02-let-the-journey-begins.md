@@ -37,9 +37,9 @@ I once heard this phrase said by my ex-CEO, William Tanuwidjaja
 
 And I found this quote to be ultra relevant in data science/machine learning field, in fact also generally in tech field. Nowadays there are abundant available resources on the internet one could benefit even without academic degree. Finally, here are my favourite online resources:
 
-1. [Khan Academy](https://khanacademy.com) - This website provides a wide variety range of machine learning fundamentals, including descriptive and inferential statistics, linear algebra, calculus, and also python
-2. [Coursera](https://www.coursera.org) - Apart from [machine learning course by Andrew Ng](https://www.coursera.org/learn/machine-learning), there are plentiful resources revolving around Data Science here. Notable course is a deep learning course from [deeplearning.ai](https://deeplearning.ai), a company founded by Andrew Ng. 
-3. [DataSchool](https://www.dataschool.io/) - I use [pandas](https://www.dataschool.io/) a lot for data analysis. Kevin Markham delivered fun contents there, including some data preprocessing techniques and some machine learning concepts.
+1. [Khan Academy](https://khanacademy.com) <br> This website provides a wide variety range of machine learning fundamentals, including descriptive and inferential statistics, linear algebra, calculus, and also python
+2. [Coursera](https://www.coursera.org) <br> Apart from [machine learning course by Andrew Ng](https://www.coursera.org/learn/machine-learning), there are plentiful resources revolving around Data Science here. Notable course is a deep learning course from [deeplearning.ai](https://deeplearning.ai), a company founded by Andrew Ng. 
+3. [DataSchool](https://www.dataschool.io/) <br> I use [pandas](https://www.dataschool.io/) a lot for data analysis. Kevin Markham delivered fun contents there, including some data preprocessing techniques and some machine learning concepts.
 
 For more advanced stuffs, I also like openly public courses taught by Stanford University:
 - [Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/)
