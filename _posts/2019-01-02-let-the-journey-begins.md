@@ -68,4 +68,4 @@ Some people might say one must understand all those maths, statistics, and machi
 
 ## Going Forward
 
-Phew, there goes my first blog post. Please give me some feedbacks as I am thriving to improve :) I have been working on several projects for my university courses and there are also some interesting projects I have in mind. So, expect more exciting contents head. Thanks for your time and happy new year 2019! 
+Phew, there goes my first blog post. Please give me some feedbacks as I am thriving to improve :) I have been working on several projects for my university courses and there are also some interesting projects I have in mind. So, expect more exciting contents ahead. Thanks for your time and happy new year 2019! 
