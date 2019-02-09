@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Solve Ranking Problem with Machine Learning"
+title: "Machine Learning Algorithms for Ranking"
 author: "Abraham Theodorus"
 categories: journal
 tags: [journal, machine learning]
