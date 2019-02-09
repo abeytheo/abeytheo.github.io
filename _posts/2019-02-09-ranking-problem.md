@@ -11,22 +11,22 @@ In the last three months I have done two machine learning projects with two frie
 
 Ranking algorithms' main task is to optimize the order of given data-sets, in a way that retrieved results are sorted in most relevant manner. Ranking is a commonly found task in our daily life and it is extremely useful for the society. Typical problems which are solved by ranking algorithms, e.g., ranking web pages in [Google](https://www.google.com), personalized product feeds for particular customers in [Amazon](https://www.amazon.com), or even top playlists to listen in [Spotify](https://www.spotify.com).
 
-From mentioned examples above, most of ranking problems deal with information retrieval and personalization domain. In information retrieval point of view, documents indeed needs to be ranked in order to match given keywords to retrieved relevant documents. If we add personalization component, the retrieved results need to satisfy users' preference as well.
+From mentioned examples above, most of ranking problems deal with information retrieval and personalization domain. In information retrieval point of view, documents indeed need to be indexed in order to match given keywords with relevant documents. If we add personalization into the puzzle, the retrieved results also need to satisfy users' preference as well.
 
 ## Learning-To-Rank Algorithms
 
 Ranking problems can be solved by specific learning algorithms, namely *Learning-To-Rank*. Citing from [a paper written by Yahoo!](http://proceedings.mlr.press/v14/chapelle11a/chapelle11a.pdf), *Learning-To-Rank* algorithms can be classified into three types based on their optimization objectives:
 
 1. **Pointwise** <br>
-   In this algorithm's perspective, data points are seen independently and every data point has its corresponding score. The learning algorithms will typically optimize mean squared error loss, hence it becomes a regression problem.
+   In this algorithm's perspective, data points are seen independently and every data point has its corresponding score. The learning algorithms will typically minimize mean squared error loss function, hence it becomes a regression problem.
 2. **Pairwise** <br>
-   Several queries are tagged with a list of relevant data-sets. Then this algorithm will optimize the loss function of paired data-sets belonging to the same list. The result of this optimization is the correct swapping of pairs, thus resulting in a list of documents with correct order.
+   Several queries are tagged with a list of relevant data-sets. Then, this algorithm will optimize the loss function of paired data-sets belonging to the same list. The result of this optimization is the correct swapping of pairs, thus generating a list of documents with reasonable order.
 3. **Listwise** <br>
-   Similar like Pairwise, but the optimization is performed at whole list of documents level instead of paired data-sets.
+   Similar like Pairwise, but the optimization is performed at whole list of documents level instead of paired data-points.
 
 ## Kaggle Challenge?!
 
-So we participated in a Kaggle challenge entitled [*PUBG Finish Placement Prediction*](https://www.kaggle.com/c/pubg-finish-placement-prediction). [PUBG](https://en.wikipedia.org/wiki/PlayerUnknown%27s_Battlegrounds) is a popular online multiplayer game where there could be 100 players playing in one match and the goal is to be the last man standing. 
+We participated in a Kaggle challenge entitled [*PUBG Finish Placement Prediction*](https://www.kaggle.com/c/pubg-finish-placement-prediction). [PUBG](https://en.wikipedia.org/wiki/PlayerUnknown%27s_Battlegrounds) is a popular online multiplayer game where there could be 100 players playing in one match and the goal is to be the last man standing. 
 
 In this Kaggle challenge, player attributes such as number of kills, walk distance, boost pickups, and damage dealt are provided as features. Player placements per match are given as continuous values and the objective is to predict the placements of all players in one particular match. The data-set can be illustrated further below:
 
@@ -47,7 +47,7 @@ Based on our observation, it was found out that for each match, rankings are ass
 
 ![alt text](/assets/img/posts/2019/feb/agg_group_feature.png "Team-Level Features")
 
-We also inspected features which have the most correlations with ranking placement and below is top 5 highest correlated features.
+We also inspected features which have the most correlations with ranking placement and below is the top 5 highest correlated features.
 
 ![alt text](/assets/img/posts/2019/feb/feature_corr.png "High correlated features")
 
@@ -73,7 +73,7 @@ The second approach is a pairwise algorithm. A pairwise algorithm needs to compa
 
 ## NDCG as Evaluation Metric
 
-In order to view this problem from the information retrieval perspective where the order and relevance of documents are evaluated per query ID, NDCG is chosen as the evaluation metric. **matchId** represents the query ID and **winPlacePerc** represents the relevance score. NDCG (Normalized Discounted Cumulative Gain) is a quite popular metric for evaluating such information retrieval model performances. This metric evaluates a collection of retrieved documents based on the order and also the relevant scores of each document. It is particularly useful when the documents have a non-binary relevance score as weights. NDCG is a normalized version of DCG. DCG is denoted by:
+In order to view this problem from information retrieval perspective, where the order and relevance of documents are evaluated per query ID, NDCG is chosen as the evaluation metric. **matchId** represents the query ID and **winPlacePerc** represents the relevance score. NDCG (Normalized Discounted Cumulative Gain) is a quite popular metric for evaluating such information retrieval model performances. This metric evaluates a collection of retrieved documents based on the order and also the relevant scores of each document. It is particularly useful when the documents have a non-binary relevance score as weights. NDCG is a normalized version of DCG. DCG is denoted by:
 
 $$
     DCG = \frac{relevanceScore_i}{\log_2 (i + 1)}
